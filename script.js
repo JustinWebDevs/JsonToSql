@@ -16,7 +16,7 @@ const formatData = (data, table) => {
   const jsonArray = [];
 
   for (const item of resultArray) {
-    jsonArray.push(JSON.parse(item));
+    jsonArray.push(JSON.parse(item, (key, value) => (value === null ? 'NULL' : value)));
   }
 
   formatSql(jsonArray, table);
