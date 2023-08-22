@@ -1,7 +1,8 @@
 const textArea = document.getElementById('textArea');
 const textAreaResult = document.getElementById('textAreaResult');
 const table = document.getElementById('table');
-const btn = document.getElementById('btn');
+const btnSql = document.getElementById('btnSql');
+const btnCopy = document.getElementById('btnCopy');
 
 const formatData = (data, table) => {
     
@@ -33,6 +34,10 @@ function formatSql(json, table){
 } 
 
 
-btn.addEventListener('click', ()=>{
+btnSql.addEventListener('click', ()=>{
     formatData(textArea.value, table.value)
+});
+
+btnCopy.addEventListener('click', ()=>{
+  navigator.clipboard.writeText(textAreaResult.value).then(console.log('copiado correctamente'));
 });

@@ -1,0 +1,34 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.custom-textarea {
+    width: 45%;
+    height: 90%;
+    resize: none; 
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+}
+
+.flex-btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tableInput{
+    margin: 5px;
+}

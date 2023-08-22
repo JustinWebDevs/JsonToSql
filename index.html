@@ -1,13 +1,23 @@
-<input type="text" name="table" id="table">
-
-<textarea id="textArea">
-
-</textarea>
-
-<button id="btn">Click</button>
-
-<textarea id="textAreaResult">
-
-</textarea>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json TO Sql</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <input type="text" name="table" id="table" placeholder="Nombre de la tabla" class="tableInput">
+    <div class="flex-container">
+        <textarea id="textArea" placeholder="Introduce tu JSON, se hara un insert por cada elemento se ignora todo fuera de {}" class="custom-textarea"></textarea>
+        <div class="flex-btns">
+            <button id="btnSql">Generar SQL</button>
+            <button id="btnCopy">Copiar SQL</button>
+        </div>
+        
+        <textarea id="textAreaResult" placeholder="Aqui se muestra el SQL generado..." class="custom-textarea"></textarea>
+    
+    </div>
+</body>
+</html>
 <script src="script.js"></script>
