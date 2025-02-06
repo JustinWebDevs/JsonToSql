@@ -1,24 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Json TO Sql</title>
-    <link href="style.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="https://icon-library.com/images/json-icon-png/json-icon-png-27.jpg">
-</head>
-<body>
-    <input type="text" name="table" id="table" placeholder="Nombre de la tabla" class="tableInput">
-    <div class="flex-container">
-        <textarea id="textArea" placeholder="Introduce tu JSON, se hara un insert por cada elemento se ignora todo fuera de {}" class="custom-textarea"></textarea>
-        <div class="flex-btns">
-            <button id="btnSql">Generar SQL</button>
-            <button id="btnCopy">Copiar SQL</button>
-        </div>
-        
-        <textarea id="textAreaResult" placeholder="Aqui se muestra el SQL generado..." class="custom-textarea"></textarea>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON to SQL</title>
+    <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="w-full max-w-2xl bg-white p-6 rounded-lg shadow-lg wave-svg">
+      <h1 class="text-2xl font-bold text-gray-700 mb-4 text-center">
+        JSON to SQL Converter 🐬
+      </h1>
+
+      <input
+        type="text"
+        id="table"
+        placeholder="Nombre de la tabla"
+        class="w-full p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+
+      <textarea
+        id="textArea"
+        placeholder="Introduce tu JSON..."
+        class="w-full h-40 p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      ></textarea>
+
+      <div class="flex justify-between">
+        <button
+          id="btnSql"
+          class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition"
+        >
+          Generar SQL
+        </button>
+        <button
+          id="btnCopy"
+          class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition"
+        >
+          Copiar SQL
+        </button>
+      </div>
+
+      <textarea
+        id="textAreaResult"
+        placeholder="Aquí se muestra el SQL generado..."
+        class="w-full h-40 p-2 border border-gray-300 rounded-lg mt-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        readonly
+      ></textarea>
     </div>
-</body>
+
+    <script src="script.js"></script>
+  </body>
 </html>
-<script src="script.js"></script>
